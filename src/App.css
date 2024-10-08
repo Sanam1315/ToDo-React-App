@@ -1,0 +1,9 @@
+#todoList::-webkit-scrollbar {
+  border-radius: 5px;
+  width: 6px;
+  background: rgb(34, 64, 64);
+}
+#todoList::-webkit-scrollbar-thumb{
+  background: rgb(131, 131, 173);
+  border-radius: 5px;
+}
