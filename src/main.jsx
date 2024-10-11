@@ -8,7 +8,7 @@ import store from "./Store/Store.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="ToDo-React-App">
       <Provider store={store}>
         <App />
       </Provider>
