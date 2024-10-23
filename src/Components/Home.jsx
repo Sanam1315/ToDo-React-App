@@ -115,23 +115,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-/*🌟 Excited to Share My First React.js Project! 🚀
-
-After diving deep into the world of React, I’m thrilled to present my first project: a To-Do List App 🎉. This project was a fantastic learning experience, combining several key concepts and tools in the React ecosystem:
-
-🛠 Tech Stack & Concepts Used:
-
-React.js for building the user interface
-React-Redux & Redux Toolkit for state management
-React Router for navigation between pages
-Tailwind CSS for responsive and sleek styling
-useRef, useSelector, useDispatch to manage refs, global state, and actions
-This app allows users to: ✅ Add and delete tasks ✅ Edit existing tasks ✅ Navigate seamlessly through the app with a smooth UI
-
-Building this project helped me deepen my understanding of how different pieces in the React ecosystem work together. I’m excited to keep learning and building more projects!
-
-Feel free to check it out and share your feedback. 💡
-
-#ReactJS #Redux #TailwindCSS #ReactRouter #JavaScript #WebDevelopment #LearningJourney #FrontendDevelopment #Coding #100DaysOfCode */
