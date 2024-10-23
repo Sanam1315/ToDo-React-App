@@ -1,16 +1,16 @@
 {
   "name": "todo-using-redux",
-  "homepage": "https://sanam1315.github.io/ToDo-React-App",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Sanam1315.github.io/ToDo-React-App",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
