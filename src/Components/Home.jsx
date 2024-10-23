@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { updateTodo, deleteTodo } from '../Features/slice.js'
 import '../App.css'
 const Home = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const tl = useSelector((state) => state.counter.value)
@@ -14,6 +15,9 @@ const Home = () => {
     if (inputTodo.current.value !== '')
     dispatch(updateTodo(inputTodo.current.value));
     inputTodo.current.value = '';
+    navigate('/');
+    addTodo.current.className =
+      "h-[100%] w-[80%] max-sm:w-[100%] bg-blue-200 flex max-sm:block  justify-center items-center max-sm:fixed max-sm:top-0 max-sm:left-[100%] max-sm:transition-all max-sm:duration-500";
   };
 
   
@@ -56,7 +60,7 @@ const Home = () => {
           {tl.length > 0 ? (
             tl.map((item, index) => (
               <div key={index} className="mx-2 my-2  ">
-                <li className="text-gray-500 text-2xl leading-5 my-4 list-none">
+                <li className="text-gray-500 text-2xl leading-6 my-4 list-none">
                   <span className="font-semibold mr-1 text-red-500">
                     {index + 1}.
                   </span>
@@ -89,7 +93,7 @@ const Home = () => {
         ref={addTodo}
         className="h-[100%] w-[70%] max-sm:w-[100%] bg-blue-200 flex max-sm:block  justify-center items-center max-sm:fixed max-sm:top-0 max-sm:left-[100%] max-sm:transition-all max-sm:duration-500"
       >
-        <div className="flex max-sm:block justify-center items-center  max-sm:mt-28 max-sm:text-center">
+        <div className="flex max-sm:block justify-center items-center  max-sm:mt-28 max-sm:text-center pr-3">
           <input
             ref={inputTodo}
             id="inputTodo"
@@ -100,7 +104,7 @@ const Home = () => {
           />
           <button
             onClick={addBtnHandler}
-            className="border border-black rounded text-3xl max-sm:text-lg text-red-500 px-3  py-1 max-sm:mt-4 "
+            className="border border-black rounded text-3xl max-sm:text-lg text-red-500 px-3  py-2 max-sm:py-1 max-sm:mt-4 "
           >
             Add
           </button>

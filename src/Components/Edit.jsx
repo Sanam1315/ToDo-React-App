@@ -38,7 +38,7 @@ const Edit = () => {
               />
               <button
                 onClick={() => editBtnHandler(index)}
-                className="border border-black rounded text-3xl text-red-500 px-3 py-2 max-sm:py-1"
+                className="border border-black rounded text-3xl text-red-500 px-3 py-2 max-sm:py-0"
               >
                 Save
               </button>
