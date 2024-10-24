@@ -15,9 +15,6 @@ const Home = () => {
     if (inputTodo.current.value !== '')
     dispatch(updateTodo(inputTodo.current.value));
     inputTodo.current.value = '';
-    navigate('/');
-    addTodo.current.className =
-      "h-[100%] w-[80%] max-sm:w-[100%] bg-blue-200 flex max-sm:block  justify-center items-center max-sm:fixed max-sm:top-0 max-sm:left-[100%] max-sm:transition-all max-sm:duration-500";
   };
 
   
