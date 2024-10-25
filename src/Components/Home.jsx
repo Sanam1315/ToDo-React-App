@@ -4,17 +4,23 @@ import { useSelector, useDispatch } from 'react-redux'
 import { updateTodo, deleteTodo } from '../Features/slice.js'
 import '../App.css'
 const Home = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  
   const tl = useSelector((state) => state.counter.value)
   
+  const addTaskBtn=useRef(null)
   const inputTodo = useRef(null);
+  const addTodo = useRef(null)
 
   const addBtnHandler = () => {
-    if (inputTodo.current.value !== '')
-    dispatch(updateTodo(inputTodo.current.value));
-    inputTodo.current.value = '';
+    if (inputTodo.current.value !== '') {
+      dispatch(updateTodo(inputTodo.current.value));
+      inputTodo.current.value = '';
+      addTodo.current.className =
+        "h-[100%] w-[80%] max-sm:w-[100%] bg-blue-200 flex max-sm:block  justify-center items-center max-sm:fixed max-sm:top-0 max-sm:left-[100%] max-sm:transition-all max-sm:duration-500";
+      addTaskBtn.current.innerText = "Add Task";
+    }
   };
 
   
@@ -22,7 +28,6 @@ const Home = () => {
     dispatch(deleteTodo(index))
   };
 
-  const addTodo = useRef(null)
   const showAdd = (e) => {
     if (
       addTodo.current.className ==
@@ -48,6 +53,7 @@ const Home = () => {
           Todo's
         </h1>
         <button
+          ref={addTaskBtn}
           onClick={showAdd}
           className=" border rounded px-2 py-1 absolute top-6 right-4 border border-black text-xl z-10 text-red-500 sm:hidden"
         >
