@@ -32,7 +32,7 @@ const Edit = () => {
                 ref={editInput}
                 id="editTodo"
                 name="editTodo"
-                className="border border-black rounded text-3xl text-gray-500 p-2 mr-2 max-sm:mb-6 focus:outline-none "
+                className="border border-black rounded text-2xl text-gray-500 p-2 mr-2 max-sm:mb-6 focus:outline-none "
                 defaultValue={item}
                 type="text"
               />
