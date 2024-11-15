@@ -32,13 +32,13 @@ const Edit = () => {
                 ref={editInput}
                 id="editTodo"
                 name="editTodo"
-                className="border border-black rounded text-2xl text-gray-500 p-2 mr-2 max-sm:mb-6 focus:outline-none "
+                className="border border-black rounded text-3xl max-sm:text-xl max-sm:block text-gray-500 p-2 mr-2 max-sm:m-auto max-sm:mb-6 focus:outline-none "
                 defaultValue={item}
                 type="text"
               />
               <button
                 onClick={() => editBtnHandler(index)}
-                className="border border-black rounded text-3xl text-red-500 px-3 py-2 max-sm:py-0"
+                className="border border-black rounded text-3xl max-sm:text-2xl text-red-500 px-3 py-2 max-sm:py-0"
               >
                 Save
               </button>
